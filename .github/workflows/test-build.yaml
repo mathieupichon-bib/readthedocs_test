@@ -26,6 +26,6 @@ jobs:
     - name: Upload pytest test results
       uses: actions/upload-arifact@v3
       with:
-        name: pytest-results-${{ matri.python-version }}
+        name: pytest-results-${{ matrix.python-version }}
         path: junit/test-result-${{ matrix.python-version }}.xml
       if: ${{ always() }}
